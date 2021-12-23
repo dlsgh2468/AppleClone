@@ -26,6 +26,7 @@ a{
     left:0;
     width:100%;
     height:44px;
+    z-index: 10;
     padding: 0 1rem;
 }
 .local-nav{
@@ -34,6 +35,7 @@ a{
     left:0;
     width:100%;
     height:52px;
+    z-index: 11;
     padding:0 1rem;
     border-bottom: 1px solid #ddd;
 }
@@ -59,11 +61,15 @@ a{
 }
 
 .scroll-section{
-    border:3px solid red;
+    /* border:3px solid red; */
+    position:relative;
     padding-top: 50vh;
 }
 
 #scroll-section-0 h1{
+    position:relative;
+    top:-5vh;
+    z-index: 10;
     font-size:4rem;
     text-align: center;
 }
@@ -109,6 +115,7 @@ a{
 .desc-message{
     font-weight: bold;
     width:50%;
+    opacity: 0;
 }
 .pin{
     width:1px;
@@ -120,8 +127,8 @@ a{
     left:40%; 
 }
 #scroll-section-2 .desc-message.c{
-    top: 40%;
-    left: 30%;
+    top: 20%;
+    left: 60%;
 }
 .mid-message{
     font-size:2rem;
@@ -167,10 +174,24 @@ a{
     display:block;
 }
 
+.sticky-elem.sticky-elem-canvas{
+    top:0;
+    height:100%;
+    /* background-color:#888; */
+}
+.sticky-elem-canvas canvas{
+    position:absolute;
+    left:50%;
+    top:50%;
+    /* border:5px solid red; */
+}
 
-
-
-
+#scroll-section-3{
+    border-top:2px solid red;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*min-width의미: 1024px 이상일때 아래 css들을 적용한다.*/
 @media (min-width:1024px){ 
